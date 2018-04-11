@@ -1,6 +1,13 @@
 - NPM install
 
-- Create users table schema
+- add .env file with the following
+
+NODE_ENV=DEVELOPMENT
+
+DB_HOST=localhost
+DB_USER=root
+DB_PASSWORD=
+DB_NAME=auth
 
 - Create sessions table with following
 
@@ -10,6 +17,8 @@ CREATE TABLE IF NOT EXISTS `sessions` (
   `data` text COLLATE utf8mb4_bin,
   PRIMARY KEY (`session_id`)
 ) ENGINE=InnoDB
+
+- create users table with the following 
 
 CREATE TABLE IF NOT EXISTS `users` (
   `id` INT NOT NULL AUTO_INCREMENT,
